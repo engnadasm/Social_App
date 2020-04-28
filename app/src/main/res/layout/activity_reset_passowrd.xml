@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".ResetPassowrdActivity">
+
+    <include
+        android:id="@+id/forget_password_toolbar"
+        layout="@layout/app_bar_layout"
+        > </include>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/forget_password_toolbar"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
+        android:id="@+id/t"
+        android:text="We will mail you a link after when you provide email and
+click the send button, Please click on that link to reset your password"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset_passowrd_email"
+        android:layout_below="@+id/t"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="write your email here"
+        android:background="@drawable/inputs"
+        android:padding="22dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset_password_email_button"
+        android:layout_below="@+id/reset_passowrd_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Send email"
+        android:background="@drawable/button"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+
+        />
+</RelativeLayout>
