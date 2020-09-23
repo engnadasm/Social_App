@@ -56,7 +56,8 @@
             android:layout_below="@+id/simpleTextID"
             android:layout_toEndOf="@+id/search_box_input"
             android:background="@drawable/inputs"
-            android:src="@drawable/settings"
+            android:src="@drawable/search"
+            android:scaleType="fitCenter"
             />
     </RelativeLayout>
 

@@ -312,13 +312,24 @@ public class MainActivity extends AppCompatActivity {
     {
         final String current_user_id = mAuth.getCurrentUser().getUid();
 
-        UsersRef.addValueEventListener(new ValueEventListener() {
+        UsersRef.child(current_user_id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
             {
                 if(!dataSnapshot.hasChild(current_user_id))
                 {
-                    SendUserToSetupActivity();
+                    if(dataSnapshot.exists())
+                    {
+                        if(!dataSnapshot.hasChild("fullname"))
+                        {
+                            SendUserToSetupActivity();
+                        }
+
+                        else
+                        {
+                            Toast.makeText(MainActivity.this, "Profile setting exists...", Toast.LENGTH_SHORT).show();
+                        }
+                    }
                 }
             }
 

@@ -78,7 +78,7 @@ public class SettingsActivity extends AppCompatActivity {
         UserProfileImageRef = FirebaseStorage.getInstance().getReference().child("Profile Images");
 
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Account Sdcettings");
+        getSupportActionBar().setTitle("Account Settings");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         settingsUserRef.addValueEventListener(new ValueEventListener() {
